@@ -106,7 +106,67 @@ body.adult-mode .website-desc {
 /* ...以下保持原有所有样式... */
 
 /* 响应式调整 */
+@media (max-width: 992px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .card-3d {
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%;
+    }
+    
+    .card-3d {
+        min-height: 180px;
+        transform-style: flat;
+    }
+    
+    .btn, .btn-outline-primary, .btn-outline-danger {
+        min-height: 48px;
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    .card-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .card-3d {
+        min-height: 160px;
+        margin-bottom: 15px;
+    }
+    
+    .btn, .btn-outline-primary, .btn-outline-danger {
+        min-height: 44px;
+        padding: 10px 20px;
+    }
+    
+    .adult-category-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    /* 成人模式移动端优化 */
     body.adult-mode .card {
         background-color: #2d2d2d;
     }
@@ -114,12 +174,4 @@ body.adult-mode .website-desc {
     body.adult-mode .card-title {
         color: #ff6b6b;
     }
-    
-    .card-3d {
-        min-height: 150px;
-        margin-bottom: 15px;
-        transform-style: flat;
-    }
-    
-    /* 其他移动端样式保持不变 */
 }

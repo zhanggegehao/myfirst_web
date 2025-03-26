@@ -15,9 +15,11 @@
             <h1>一站式导航站</h1>
             <p class="lead">您通往精彩世界的跳转入口</p>
             <div class="mode-toggle text-end mt-3">
-                <div class="form-check form-switch d-inline-block">
+                <div class="form-check form-switch d-inline-block" data-bs-toggle="tooltip" title="特殊模式">
                     <input class="form-check-input" type="checkbox" id="adultModeToggle">
-                    <label class="form-check-label" for="adultModeToggle">成人模式</label>
+                    <label class="form-check-label" for="adultModeToggle">
+                        <i class="fas fa-eye-slash"></i>
+                    </label>
                 </div>
             </div>
         </header>
@@ -247,7 +249,9 @@
                     {name: "XNXX", url: "https://www.xnxx.com"},
                     {name: "RedTube", url: "https://www.redtube.com"},
                     {name: "YouPorn", url: "https://www.youporn.com"},
-                    {name: "SpankBang", url: "https://www.spankbang.com"}
+                    {name: "SpankBang", url: "https://www.spankbang.com"},
+                    {name: "草榴社区", url: "https://www.t66y.com"},
+                    {name: "色播网", url: "http://www.sebzw.com"}
                 ]
             },
             {
@@ -257,18 +261,22 @@
                     {name: "NHentai", url: "https://nhentai.net"},
                     {name: "Hentai Foundry", url: "https://www.hentai-foundry.com"},
                     {name: "Fakku", url: "https://www.fakku.net"},
-                    {name: "E-Hentai", url: "http://e-hentai.org"}
+                    {name: "E-Hentai", url: "http://e-hentai.org"},
+                    {name: "18禁漫画", url: "http://www.18mh.com"},
+                    {name: "色情漫画屋", url: "http://www.sexmhw.com"}
                 ]
             },
-            {
-                title: "成人小说",
-                description: "成人文学与故事平台",
-                links: [
-                    {name: "Literotica", url: "https://www.literotica.com"},
-                    {name: "Lush Stories", url: "https://www.lushstories.com"},
-                    {name: "StoriesOnline", url: "https://www.storiesonline.net"}
-                ]
-            }
+                {
+                    title: "成人小说",
+                    description: "成人文学与故事平台",
+                    links: [
+                        {name: "Literotica", url: "https://www.literotica.com"},
+                        {name: "Lush Stories", url: "https://www.lushstories.com"},
+                        {name: "StoriesOnline", url: "https://www.storiesonline.net"},
+                        {name: "色文阁", url: "http://www.seweng.com"},
+                        {name: "情色小说吧", url: "http://www.qingsexs.com"}
+                    ]
+                }
         ];
 
         // 初始化页面
@@ -353,6 +361,12 @@
             const container = document.getElementById('mainContent');
             container.innerHTML = originalContent;
         }
+
+        // 初始化tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
 
         // 模式切换功能
         document.getElementById('adultModeToggle').addEventListener('change', function() {
