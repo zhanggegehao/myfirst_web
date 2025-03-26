@@ -2,63 +2,104 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音乐导航 - 一站式导航站</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .website-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .website-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        .website-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .website-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .website-link {
+            display: block;
+            text-align: center;
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .website-link:hover {
+            background: #e9ecef;
+        }
+    </style>
 </head>
 <body>
-    <div class="container animate-container">
-        <header class="text-center my-5 animate-header">
-            <h1>音乐导航</h1>
-            <p class="lead">海量音乐资源，多种风格</p>
-            <a href="../index.html" class="btn btn-outline-light">返回首页</a>
-        </header>
-
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">主流平台</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://music.163.com" target="_blank">网易云音乐</a></li>
-                            <li class="list-group-item"><a href="https://www.qqmusic.com" target="_blank">QQ音乐</a></li>
-                            <li class="list-group-item"><a href="https://www.kugou.com" target="_blank">酷狗音乐</a></li>
-                        </ul>
-                    </div>
+    <div class="container py-4">
+        <h1 class="text-center mb-4">音乐导航</h1>
+        
+        <div class="row">
+            <!-- 主流音乐平台 -->
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">QQ音乐</div>
+                    <div class="website-desc">正版音乐平台</div>
+                    <a href="https://y.qq.com" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">独立音乐</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://www.xiami.com" target="_blank">虾米音乐</a></li>
-                            <li class="list-group-item"><a href="https://www.soundcloud.com" target="_blank">SoundCloud</a></li>
-                        </ul>
-                    </div>
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">网易云音乐</div>
+                    <div class="website-desc">音乐社交平台</div>
+                    <a href="https://music.163.com" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">古典音乐</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://www.classicfm.com" target="_blank">Classic FM</a></li>
-                            <li class="list-group-item"><a href="https://www.naxos.com" target="_blank">Naxos</a></li>
-                        </ul>
-                    </div>
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">酷狗音乐</div>
+                    <div class="website-desc">海量音乐资源</div>
+                    <a href="https://www.kugou.com" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <!-- 其他音乐服务 -->
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">酷我音乐</div>
+                    <div class="website-desc">高品质音乐平台</div>
+                    <a href="https://www.kuwo.cn" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">Spotify</div>
+                    <div class="website-desc">全球音乐平台</div>
+                    <a href="https://www.spotify.com" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">Apple Music</div>
+                    <div class="website-desc">苹果音乐服务</div>
+                    <a href="https://music.apple.com" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
         </div>
 
-        <footer class="text-center my-5">
-            <p>极致听觉享受，尽在一站式导航站</p>
-        </footer>
+        <div class="text-center mt-4">
+            <a href="../index.html" class="btn btn-outline-primary">返回首页</a>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

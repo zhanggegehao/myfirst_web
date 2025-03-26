@@ -2,63 +2,102 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI导航 - 一站式导航站</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .website-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .website-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        .website-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .website-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .website-link {
+            display: block;
+            text-align: center;
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .website-link:hover {
+            background: #e9ecef;
+        }
+    </style>
 </head>
 <body>
-    <div class="container animate-container">
-        <header class="text-center my-5 animate-header">
-            <h1>AI导航</h1>
-            <p class="lead">前沿人工智能工具与资源</p>
-            <a href="../index.html" class="btn btn-outline-light">返回首页</a>
-        </header>
-
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">AI生成</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://openai.com" target="_blank">OpenAI</a></li>
-                            <li class="list-group-item"><a href="https://deepai.org" target="_blank">DeepAI</a></li>
-                            <li class="list-group-item"><a href="https://www.midjourney.com" target="_blank">Midjourney</a></li>
-                        </ul>
-                    </div>
+    <div class="container py-4">
+        <h1 class="text-center mb-4">AI导航</h1>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">ChatGPT</div>
+                    <div class="website-desc">OpenAI开发的对话AI</div>
+                    <a href="https://chat.openai.com" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">AI写作</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://www.jasper.ai" target="_blank">Jasper</a></li>
-                            <li class="list-group-item"><a href="https://www.copy.ai" target="_blank">Copy.ai</a></li>
-                        </ul>
-                    </div>
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">Claude</div>
+                    <div class="website-desc">Anthropic开发的AI助手</div>
+                    <a href="https://claude.ai" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">AI编程</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></li>
-                            <li class="list-group-item"><a href="https://www.tabnine.com" target="_blank">Tabnine</a></li>
-                        </ul>
-                    </div>
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">Midjourney</div>
+                    <div class="website-desc">AI图像生成工具</div>
+                    <a href="https://www.midjourney.com" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">Stable Diffusion</div>
+                    <div class="website-desc">开源AI绘画模型</div>
+                    <a href="https://stablediffusionweb.com" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">Notion AI</div>
+                    <div class="website-desc">智能笔记和写作助手</div>
+                    <a href="https://www.notion.so/product/ai" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">Runway</div>
+                    <div class="website-desc">AI视频创作工具</div>
+                    <a href="https://runwayml.com" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
         </div>
 
-        <footer class="text-center my-5">
-            <p>智能未来，尽在一站式导航站</p>
-        </footer>
+        <div class="text-center mt-4">
+            <a href="../index.html" class="btn btn-outline-primary">返回首页</a>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

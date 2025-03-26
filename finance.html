@@ -2,65 +2,102 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>金融导航 - 一站式导航站</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .website-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .website-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        .website-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .website-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .website-link {
+            display: block;
+            text-align: center;
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .website-link:hover {
+            background: #e9ecef;
+        }
+    </style>
 </head>
 <body>
-    <div class="container animate-container">
-        <header class="text-center my-5 animate-header">
-            <h1>金融导航</h1>
-            <p class="lead">银行服务、投资理财、支付工具</p>
-            <a href="../index.html" class="btn btn-outline-light">返回首页</a>
-        </header>
-
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">银行服务</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://www.icbc.com.cn" target="_blank">工商银行</a></li>
-                            <li class="list-group-item"><a href="https://www.ccb.com" target="_blank">建设银行</a></li>
-                            <li class="list-group-item"><a href="https://www.boc.cn" target="_blank">中国银行</a></li>
-                        </ul>
-                    </div>
+    <div class="container py-4">
+        <h1 class="text-center mb-4">金融导航</h1>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">中国人民银行</div>
+                    <div class="website-desc">中央银行官方网站</div>
+                    <a href="http://www.pbc.gov.cn" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">投资理财</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://fund.eastmoney.com" target="_blank">天天基金网</a></li>
-                            <li class="list-group-item"><a href="https://www.antfortune.com" target="_blank">蚂蚁财富</a></li>
-                            <li class="list-group-item"><a href="https://www.jdjr.com" target="_blank">京东金融</a></li>
-                        </ul>
-                    </div>
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">中国银联</div>
+                    <div class="website-desc">银行卡联合组织</div>
+                    <a href="https://www.unionpay.com" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">支付工具</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="https://www.alipay.com" target="_blank">支付宝</a></li>
-                            <li class="list-group-item"><a href="https://pay.weixin.qq.com" target="_blank">微信支付</a></li>
-                            <li class="list-group-item"><a href="https://www.unionpay.com" target="_blank">云闪付</a></li>
-                        </ul>
-                    </div>
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">东方财富</div>
+                    <div class="website-desc">金融信息服务平台</div>
+                    <a href="https://www.eastmoney.com" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">支付宝</div>
+                    <div class="website-desc">第三方支付平台</div>
+                    <a href="https://www.alipay.com" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">天天基金</div>
+                    <div class="website-desc">基金交易平台</div>
+                    <a href="https://fund.eastmoney.com" target="_blank" class="website-link">访问</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="website-card">
+                    <div class="website-name">雪球</div>
+                    <div class="website-desc">投资者社区</div>
+                    <a href="https://xueqiu.com" target="_blank" class="website-link">访问</a>
                 </div>
             </div>
         </div>
 
-        <footer class="text-center my-5">
-            <p>财富管理，尽在一站式导航站</p>
-        </footer>
+        <div class="text-center mt-4">
+            <a href="../index.html" class="btn btn-outline-primary">返回首页</a>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
